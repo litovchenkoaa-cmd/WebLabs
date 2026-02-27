@@ -1,0 +1,140 @@
+<!--<html lang="ru">
+<head>
+  <title>Туризм</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <table border="1" width="800">
+    <h3>ПУТЕШЕСТВИЯ</h3>
+    навигация по блокам с якорями
+    <table border="1" width="600" align="center">
+      <tr>
+        <h3>НАЗВАНИЕ СТРАНЫ</h3>
+
+      </tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+      <tr></tr>
+    </table>
+  </table>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Путешествия</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #e5e5e5;
+        font-family: Arial, sans-serif;
+        color: #777;
+    }
+
+    .container {
+        width: 700px;
+        margin: 40px auto;
+    }
+
+    h1 {
+        font-size: 32px;
+        font-weight: normal;
+        margin-bottom: 5px;
+    }
+
+    .nav a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: #555;
+    }
+
+    .nav a:hover {
+        text-decoration: underline;
+    }
+
+    .block {
+        border: 1px solid #aaa;
+        padding: 30px;
+        margin-bottom: 20px;
+        background: #eee;
+    }
+
+    h2 {
+        font-weight: normal;
+        color: #666;
+    }
+
+    html {
+        scroll-behavior: smooth; /* плавная прокрутка */
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>ПУТЕШЕСТВИЯ</h1>
+
+    <div class="nav">
+        <a href="#country">Страна</a>
+        <a href="#map">Карта</a>
+        <a href="#description">Описание</a>
+        <a href="#weather">Погода</a>
+        <a href="#about">О нас</a>
+        <a href="#form">Форма</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacts">Контакты</a>
+    </div>
+
+    <div class="block" id="country">
+        <h2>НАЗВАНИЕ СТРАНЫ</h2>
+        <p>блок &lt;header&gt;</p>
+    </div>
+
+    <div class="block" id="map">
+        <h2>Карта регионов</h2>
+        <p>Кликабельное svg-изображение</p>
+    </div>
+
+    <div class="block" id="description">
+        <h2>Описание</h2>
+        <p>Красиво оформленный текст</p>
+    </div>
+
+    <div class="block" id="weather">
+        <h2>Погода</h2>
+        <p>Прогноз по регионам</p>
+    </div>
+
+    <div class="block" id="about">
+        <h2>О нас / о стране</h2>
+        <p>Блок с цифрами</p>
+    </div>
+
+    <div class="block" id="form">
+        <h2>Форма обратной связи</h2>
+        <p>Форма для ввода текста</p>
+    </div>
+
+    <div class="block" id="faq">
+        <h2>FAQ</h2>
+        <p>Раскрывающиеся элементы</p>
+    </div>
+
+    <div class="block" id="contacts">
+        <h2>Контакты</h2>
+        <p>блок &lt;footer&gt;</p>
+    </div>
+
+</div>
+
+</body>
+</html>
