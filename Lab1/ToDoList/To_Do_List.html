@@ -1,52 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="orthodox.png" type="image/png">
-    <link href="style.css" rel="stylesheet" type="text/css"/>
-    <title>ToDoList</title>
-
-    <style>
-        footer{
-            border-top: 1px solid black;
-        }
-    </style>
+    <title>Список дел</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Список дел</h1>
+    <div class="app">
+        <header class="header">
+            <h1 class="header__title">
+                <span class="header__icon">📋</span> Список дел
+            </h1>
+        </header>
 
-  <form class="parent">
-    <input type="text" id="input_bar" placeholder="Новый элемент списка" />
-    <button type="reset" class="child">Создать</button>
-    <button type="submit" class="child">Очистить всё</button>
-  </form>
+        <main class="main">
+            <form class="todo-form">
+                <input type="text" class="todo-form__input" placeholder="Новый элемент списка">
+                <button type="button" class="todo-form__button todo-form__button--create">Создать</button>
+                <button type="button" class="todo-form__button todo-form__button--clear">Очистить всё</button>
+            </form>
 
-  <ol>
-    <li>
-        
-        <label>
-            <input type="checkbox" />Почесать кошку &#9766; 
-            <sub>от 24.08.2023</sub>
-        </label>
-    </li>
-    <li>
-        <label>
-            <input type="checkbox" />Полить картошку &#9766;
-            <sub>от 05.06.2022</sub>
-        </label>
-    </li>
-    <li>
-        
-        <label>
-            <input type="checkbox" />Сложить в лукошко &#9766;
-            <sub>от 29.02.2024</sub>
-        </label>
-    </li>
-  </ol>
+            <div class="todo-list-container">
+                <ul class="todo-list">
+                    <li class="todo-item">
+                        <label class="todo-item__label">
+                            <input type="checkbox" class="todo-item__checkbox" checked>
+                            <span class="todo-item__text">Почесать кошку</span>
+                        </label>
+                        <span class="todo-item__date">от 14.08.2023</span>
+                        <button class="todo-item__delete" aria-label="Удалить">✖</button>
+                    </li>
+                    <li class="todo-item">
+                        <label class="todo-item__label">
+                            <input type="checkbox" class="todo-item__checkbox" checked>
+                            <span class="todo-item__text">Полить картошку</span>
+                        </label>
+                        <span class="todo-item__date">от 04.05.2022</span>
+                        <button class="todo-item__delete" aria-label="Удалить">✖</button>
+                    </li>
+                    <li class="todo-item">
+                        <label class="todo-item__label">
+                            <input type="checkbox" class="todo-item__checkbox" checked>
+                            <span class="todo-item__text">Сложить в лукошко</span>
+                        </label>
+                        <span class="todo-item__date">от 19.05.2022</span>
+                        <button class="todo-item__delete" aria-label="Удалить">✖</button>
+                    </li>
+                </ul>
+            </div>
+        </main>
 
-  <footer>
-    <p>&copy AlexLit</p>
-  </footer>
+        <footer class="footer">
+            <p class="footer__text">Copyright ©</p>
+        </footer>
+    </div>
 </body>
 </html>

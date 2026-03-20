@@ -1,140 +1,157 @@
-<!--<html lang="ru">
-<head>
-  <title>Туризм</title>
-  <meta charset="UTF-8">
-</head>
-<body>
-  <table border="1" width="800">
-    <h3>ПУТЕШЕСТВИЯ</h3>
-    навигация по блокам с якорями
-    <table border="1" width="600" align="center">
-      <tr>
-        <h3>НАЗВАНИЕ СТРАНЫ</h3>
-
-      </tr>
-      <tr></tr>
-      <tr></tr>
-      <tr></tr>
-      <tr></tr>
-      <tr></tr>
-      <tr></tr>
-      <tr></tr>
-    </table>
-  </table>
-
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Путешествия</title>
-
-<style>
-    body {
-        margin: 0;
-        background: #e5e5e5;
-        font-family: Arial, sans-serif;
-        color: #777;
-    }
-
-    .container {
-        width: 700px;
-        margin: 40px auto;
-    }
-
-    h1 {
-        font-size: 32px;
-        font-weight: normal;
-        margin-bottom: 5px;
-    }
-
-    .nav a {
-        margin-right: 15px;
-        text-decoration: none;
-        color: #555;
-    }
-
-    .nav a:hover {
-        text-decoration: underline;
-    }
-
-    .block {
-        border: 1px solid #aaa;
-        padding: 30px;
-        margin-bottom: 20px;
-        background: #eee;
-    }
-
-    h2 {
-        font-weight: normal;
-        color: #666;
-    }
-
-    html {
-        scroll-behavior: smooth; /* плавная прокрутка */
-    }
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешествия</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-
-    <h1>ПУТЕШЕСТВИЯ</h1>
-
-    <div class="nav">
-        <a href="#country">Страна</a>
-        <a href="#map">Карта</a>
-        <a href="#description">Описание</a>
-        <a href="#weather">Погода</a>
-        <a href="#about">О нас</a>
-        <a href="#form">Форма</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contacts">Контакты</a>
+    <!-- Шапка на всю ширину -->
+    <div class="header">
+        <div class="header-content">
+            <h1>ПУТЕШЕСТВИЯ</h1>
+            
+            <div class="nav">
+                <a href="#country">Страна</a>
+                <a href="#map">Карта</a>
+                <a href="#description">Описание</a>
+                <a href="#weather">Погода</a>
+                <a href="#about">О нас</a>
+                <a href="#form">Форма</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contacts">Контакты</a>
+            </div>
+        </div>
     </div>
 
+    <!-- Блоки на всю ширину -->
     <div class="block" id="country">
-        <h2>НАЗВАНИЕ СТРАНЫ</h2>
-        <p>блок &lt;header&gt;</p>
+        <div class="block-content">
+            <h2>НАЗВАНИЕ СТРАНЫ</h2>
+            <p>блок &lt;header&gt;</p>
+            <div class="demo-card">
+                <p>Добро пожаловать в удивительное путешествие! Здесь начинается ваше приключение.</p>
+            </div>
+        </div>
     </div>
 
     <div class="block" id="map">
-        <h2>Карта регионов</h2>
-        <p>Кликабельное svg-изображение</p>
+        <div class="block-content">
+            <h2>Карта регионов</h2>
+            <p>Кликабельное svg-изображение</p>
+            <div class="demo-card">
+                <p>Исследуйте интерактивную карту с основными достопримечательностями</p>
+                <button class="demo-button">Открыть карту</button>
+            </div>
+        </div>
     </div>
 
     <div class="block" id="description">
-        <h2>Описание</h2>
-        <p>Красиво оформленный текст</p>
+        <div class="block-content">
+            <h2>Описание</h2>
+            <p>Красиво оформленный текст</p>
+            <div class="demo-card">
+                <p>Узнайте больше об истории, культуре и традициях этого удивительного места</p>
+            </div>
+        </div>
     </div>
 
     <div class="block" id="weather">
-        <h2>Погода</h2>
-        <p>Прогноз по регионам</p>
+        <div class="block-content">
+            <h2>Погода</h2>
+            <p>Прогноз по регионам</p>
+            <div class="demo-card">
+                <p>🌡️ Текущая температура: +24°C</p>
+                <p>💧 Влажность: 65%</p>
+                <p>💨 Скорость ветра: 5 м/с</p>
+            </div>
+        </div>
     </div>
 
     <div class="block" id="about">
-        <h2>О нас / о стране</h2>
-        <p>Блок с цифрами</p>
+        <div class="block-content">
+            <h2>О нас / о стране</h2>
+            <p>Блок с цифрами</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>15+</h3>
+                    <p>Лет опыта</p>
+                </div>
+                <div class="stat-card">
+                    <h3>50+</h3>
+                    <p>Стран</p>
+                </div>
+                <div class="stat-card">
+                    <h3>5000+</h3>
+                    <p>Туристов</p>
+                </div>
+                <div class="stat-card">
+                    <h3>100%</h3>
+                    <p>Удовольствия</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="block" id="form">
-        <h2>Форма обратной связи</h2>
-        <p>Форма для ввода текста</p>
+        <div class="block-content">
+            <h2>Форма обратной связи</h2>
+            <p>Форма для ввода текста</p>
+            <div class="demo-card" style="max-width: 500px;">
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Ваш email">
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Ваше сообщение"></textarea>
+                    </div>
+                    <button class="demo-button" type="button">Отправить</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <div class="block" id="faq">
-        <h2>FAQ</h2>
-        <p>Раскрывающиеся элементы</p>
+        <div class="block-content">
+            <h2>FAQ</h2>
+            <p>Раскрывающиеся элементы</p>
+            <div class="faq-item">
+                <div class="faq-question">📄 Какие документы нужны для поездки?</div>
+                <div class="faq-answer">ЗАГС паспорт, виза, страховка и международные права</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">💵 Какая валюта используется?</div>
+                <div class="faq-answer">Местная валюта - дирхамы, также принимают евро и доллары</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">📅 Когда лучше ехать?</div>
+                <div class="faq-answer">Оптимальное время: октябрь-апрель, температура комфортная</div>
+            </div>
+        </div>
     </div>
 
     <div class="block" id="contacts">
-        <h2>Контакты</h2>
-        <p>блок &lt;footer&gt;</p>
+        <div class="block-content">
+            <h2>Контакты</h2>
+            <p>блок &lt;footer&gt;</p>
+            <div style="max-width: 600px;">
+                <p>📍 г. Москва, ул. Путешественников, 15</p>
+                <p>📞 +7 (999) 123-45-67</p>
+                <p>✉️ info@travel.ru</p>
+                <div class="social-links">
+                    <div class="social-icon">📘</div>
+                    <div class="social-icon">📷</div>
+                    <div class="social-icon">🐦</div>
+                    <div class="social-icon">▶️</div>
+                </div>
+            </div>
+        </div>
     </div>
-
-</div>
 
 </body>
 </html>
