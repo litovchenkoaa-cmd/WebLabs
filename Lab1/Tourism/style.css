@@ -95,48 +95,6 @@ body {
     z-index: 10;
 }
 
-/* Фоновые изображения */
-#country {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Images/antarktida_4.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-#map {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Images/MAP_4.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-#gallery, #description, #weather, #about, #form, #faq, #contacts {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Images/Background.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-h2 {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    color: #2c3e50;
-    position: relative;
-    display: inline-block;
-}
-
-h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 80px;
-    height: 4px;
-    background: #2c3e50;
-    transition: width 0.4s ease;
-}
-
 .block:hover h2::after {
     width: 150px;
 }
@@ -163,6 +121,49 @@ p {
 .block:hover::before {
     left: 100%;
 }
+
+/* Фоновые изображения */
+#country {
+    background: url('Images/antarktida_4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#map {
+    background: url('Images/MAP_4.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#gallery, #description, #weather, #about, #form, #faq, #contacts {
+    background: url('Images/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: #2c3e50;
+    transition: width 0.4s ease;
+}
+
 
 /* Галерея */
 .gallery-grid {
@@ -351,14 +352,14 @@ p {
 
 .stat-card h3 {
     font-size: 42px;
-    color: white;
+    color: #2c3e50;
     margin-bottom: 10px;
 }
 
 .stat-card p {
     margin: 0;
     font-size: 18px;
-    color: white;
+    color: #2c3e50;
 }
 
 /* Форма */
@@ -433,12 +434,13 @@ p {
     cursor: pointer;
     color: #2c3e50;
     font-size: 24px;
+    
     border: 1px solid rgba(255,255,255,0.2);
 }
 
 .social-icon:hover {
     transform: scale(1.2) rotate(360deg);
-    background: white;
+    border-color: #2c3e50;
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
