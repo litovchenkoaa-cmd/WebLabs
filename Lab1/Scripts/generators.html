@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script src="generators.js"></script>
+
+    <!-- Одна единственная кнопка на всю страницу -->
+    <button onclick="processAllTasks()">Вычислить все</button>
+
+    <!-- Поля ввода без своих кнопок -->
+    <div>
+        <input type="text" id="input1" placeholder="1">
+        <div><strong>Результат 1:</strong> <span id="result1"></span></div>
+    </div>
+    <div>
+        <input type="text" id="input2" placeholder="2">
+        <div><strong>Результат 2:</strong> <span id="result2"></span></div>
+    </div>
+    <div>
+        <!-- Для func3 нужно два значения. В условии сказано преобразовывать данные, 
+             поэтому ожидаем строку вида "123,5" или просто оставляем как есть, 
+             а функция распределения решит что делать. В изначальной func3 было два аргумента. 
+             Сделаем так: если в поле две цифры через запятую, разобьем. Иначе передадим одно значение. -->
+        <input type="text" id="input3" placeholder="3">
+        <div><strong>Результат 3:</strong> <span id="result3"></span></div>
+    </div>
+    <div>
+        <input type="text" id="input4" placeholder="4 Строка">
+        <div><strong>Результат 4:</strong> <span id="result4"></span></div>
+    </div>
+    <div>
+        <input type="text" id="input5" placeholder="5 Число">
+        <div><strong>Результат 5:</strong> <span id="result5"></span></div>
+    </div>
+</body>
+</html>
