@@ -2,6 +2,7 @@ let inputElement1;
 let forfunc1;
 let inputElement2;
 let forfunc2;
+let arr = [1, 1, 1];
 
 function processTask1() {
     // Получаем элемент ввода
@@ -44,8 +45,22 @@ function * Func1(min, max) {
 
 function * Func2(n)
 {
+    let i;
     if([0, 1, 2].includes(n)){
-        return 1;
+        return arr[n];
     }
-    return (Func2(n - 2) + Func2(n - 3));
+    if(n > arr.length)
+    {
+        i = arr.length - 1
+    }
+    else
+    {
+        i = n-1
+    }
+    for(; i < n; i++)
+    {
+        arr.push(arr[i - 2] + arr[i - 1]);
+        
+    }
+    return arr[arr.length-1];
 }
