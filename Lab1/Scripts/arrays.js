@@ -129,6 +129,7 @@ function Func6(stroka, value)
     let arr = stroka.split(' ');
     arr = arr.map(a => Number(a));
     let quantity = 0;
+    const map = new Map();
 
     for (let i = 0; i < arr.length; i++)
     {
@@ -140,9 +141,10 @@ function Func6(stroka, value)
             }
             else
             {
-                if(arr[i] + arr[j] === value)
+                if(arr[i] + arr[j] === value && arr[j] !== map.get(arr[i]))
                 {
                     quantity += 1;
+                    map.set(arr[i], arr[j]);
                 }
             }
         }
