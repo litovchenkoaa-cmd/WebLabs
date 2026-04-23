@@ -13,39 +13,44 @@ let PadovanSequence = [1, 1, 1];
 let arr = [2];
 
 
-function processTask1() {
+function processTask1() {//Реализовать генератор, бесконечно возвращающий случайное число в заданном диапазоне random(n, m)
     // Получаем элемент ввода
     inputElement1 = document.getElementById(`input1`);
-  
+    
+
     if(inputElement1.value !== '')
     {
+    //Делим введённую строку на части, разделённые пробелом
     forfunc1 = inputElement1.value.split(' ');
     inputElement1.value = '';
     }
+    //Переводим эти части в числа и передаём функции рандомного числа
     const func1 = Func1(Number(forfunc1[0]), Number(forfunc1[1]));
     func1.next();
 
     
 }
 
-function processTask2() {
+function processTask2() {//Реализовать генератор, бесконечно возвращающий очередное число из последовательности Падована.
     // Получаем элемент ввода
     inputElement2 = document.getElementById(`input2`);
    
     if(inputElement2.value !== '')
     {
+    //Преобразуем ввод в число
     forfunc2 = Number(inputElement2.value);
     inputElement2.value = '';
     }
     const func2 = Func2(forfunc2);
     
     document.getElementById('result2').textContent = func2.next().value;
+    //Каждую итерацию(нажатие на кнопку) увеличиваем число передаваемое в функцию для получения очередного числа из последовательности
     forfunc2++;
 
     
 }
 
-function processTask3() {
+function processTask3() {//Реализовать генератор, бесконечно возвращающий очередное простое число.
     // Получаем элемент ввода
     inputElement3 = document.getElementById(`input3`);
    
@@ -60,14 +65,15 @@ function processTask3() {
     forfunc3++;
 }
 
-function processTask4() {
+function processTask4() {//Посчитать число вхождений букв (или слов) в строке, используя Map.
     // Получаем элемент ввода
     inputElement4 = document.getElementById(`input4`);
    
     if(inputElement4.value !== '')
     {
+    //Делим введённую строку на части, разделённые запятой
     forfunc4 = inputElement4.value.split(',').map(part => part.trim());
-    
+    //Передаём эти части
     if (forfunc4.length === 2) {
         document.getElementById('result4').textContent = Func4(forfunc4[0], forfunc4[1]);
     } else {
@@ -79,7 +85,7 @@ function processTask4() {
     
 }
 
-function processTask5() {
+function processTask5() {//Написать функцию getPrime(n), возвращающее n-ное по счёту простое число, используя BigInt.
     // Получаем элемент ввода
     inputElement5 = document.getElementById(`input5`);
    
@@ -88,23 +94,20 @@ function processTask5() {
     forfunc5 = Number(inputElement5.value);
     
     
-    document.getElementById('result5').textContent = Func5(forfunc5);
-    
-        
-    
+    document.getElementById('result5').textContent = getPrime(forfunc5);
     inputElement5.value = '';
     }
     
 }
 
-function * Func1(min, max) {
-    for(let i = 0; i < i+1; i++) {
-        document.getElementById('result1').textContent = (Math.floor(Math.random() * (max - min + 1) + min));
-        yield i;
-    }
+function * Func1(min, max) {//Реализовать генератор, бесконечно возвращающий случайное число в заданном диапазоне random(n, m)
+    //Выводим в качестве результата вычисления: Округление до меньшего числа([0..1] * (max - min + 1) + min)
+    document.getElementById('result1').textContent = (Math.floor(Math.random() * (max - min + 1) + min));
+    
+    
 }
 
-function * Func2(n)
+function * Func2(n)//Реализовать генератор, бесконечно возвращающий очередное число из последовательности Падована.
 {
     let i;
     if([0, 1, 2].includes(n)){
@@ -126,16 +129,17 @@ function * Func2(n)
     return PadovanSequence[PadovanSequence.length-1];
 }
 
-function * Func3(n)
+function * Func3(n)//Реализовать генератор, бесконечно возвращающий очередное простое число.
 {
     
     if (n <= arr.length) return arr[n - 1];
     
     
     let item = arr[arr.length - 1];
+    let flag
     while (arr.length < n)
     {
-        let flag
+        
         do{
             flag = false;
             item++;
@@ -161,7 +165,6 @@ function * Func3(n)
             
         }while(flag)
         
-        flag = true;
     }
     
     return arr[arr.length-1];
@@ -169,7 +172,7 @@ function * Func3(n)
     
 }
 
-function Func4(stroka, item)
+function Func4(stroka, item)//Посчитать число вхождений букв (или слов) в строке, используя Map.
 {
     let flag = (item.length > 1)? true: false;
     const map = new Map();
@@ -194,32 +197,43 @@ function Func4(stroka, item)
     
 }
 
-function getPrime(n) {
-    if (n <= 0) throw new Error('n должно быть положительным');
+function getPrime(n) {//Написать функцию getPrime(n), возвращающее n-ное по счёту простое число, используя BigInt.
+    if (n < 0) throw new Error('n должно быть положительным');
     
-    const primes = [2n];
-    if (n === 1) return 2n;
+    if (n <= arr.length) return arr[n - 1];
     
-    let candidate = 3n;
     
-    while (primes.length < n) {
-        let isPrime = true;
-        const limit = candidate / 2n;
+    let item = arr[arr.length - 1];
+    let flag
+    while (arr.length < n)
+    {
         
-        for (const prime of primes) {
-            if (prime > limit) break;
-            if (candidate % prime === 0n) {
-                isPrime = false;
-                break;
+        do{
+            flag = false;
+            item++;
+            if(item % 2 === 0){
+                flag = true;
+                continue;
             }
-        }
+
+            let i = (Math.trunc(item/2) % 2 === 0) ? Math.trunc(item/2) - 1 : Math.trunc(item/2);
+            for(; i > 2; i=i-2)
+            {
+                if (item % i === 0)
+                {
+                    flag = true;
+                    break;
+                }
+            }
+
+            if(!flag)
+            {
+                arr.push(item);
+            }
+            
+        }while(flag)
         
-        if (isPrime) {
-            primes.push(candidate);
-        }
-        
-        candidate += 2n;
     }
     
-    return primes[n - 1];
+    return arr[arr.length-1];
 }
