@@ -164,6 +164,52 @@ h2::after {
     transition: width 0.4s ease;
 }
 
+.map-container {
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.map-info {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    display: none;
+}
+
+.map-info.active {
+    display: block;
+}
+
+.region {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.region:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+    filter: brightness(1.2);
+}
+
+.region.selected {
+    stroke: #fff;
+    stroke-width: 2;
+}
+
+.region-label {
+    font-size: 12px;
+    fill: white;
+    pointer-events: none;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
 
 /* Галерея */
 .gallery-grid {

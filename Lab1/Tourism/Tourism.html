@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <script src="code.js"></script>
     <!-- Шапка на всю ширину -->
     <div class="header">
         <div class="header-content">
@@ -43,6 +43,10 @@
             <div class="demo-card">
                 <p>Исследуйте интерактивную карту с основными достопримечательностями</p>
                 <button class="demo-button">Открыть карту</button>
+            </div>
+            <div class="map-container" id="map-container" style="display: none;">
+                <div id="map-svg"></div>
+                <div id="map-info" class="map-info"></div>
             </div>
         </div>
     </div>
