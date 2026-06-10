@@ -24,33 +24,21 @@
                 <button type="button" class="todo-form__button todo-form__button--clear">Очистить всё</button>
             </form>
 
+            <div class="controls">
+                <div class="filters">
+                    <a href="#" class="filter-link filter-link--active" data-filter="all">Все</a>
+                    <a href="#" class="filter-link" data-filter="active">Не сделанные</a>
+                    <a href="#" class="filter-link" data-filter="completed">Сделанные</a>
+                </div>
+                <div class="sort-controls">
+                    <button type="button" class="sort-button" data-sort="name">А–Я</button>
+                    <button type="button" class="sort-button" data-sort="date">По дате</button>
+                </div>
+            </div>
+
             <div class="todo-list-container">
-                <ul class="todo-list">
-                    <li class="todo-item">
-                        <label class="todo-item__label">
-                            <input type="checkbox" class="todo-item__checkbox" checked>
-                            <span class="todo-item__text">Почесать кошку</span>
-                        </label>
-                        <span class="todo-item__date">от 14.08.2023</span>
-                        <button class="todo-item__delete" aria-label="Удалить">✖</button>
-                    </li>
-                    <li class="todo-item">
-                        <label class="todo-item__label">
-                            <input type="checkbox" class="todo-item__checkbox" checked>
-                            <span class="todo-item__text">Полить картошку</span>
-                        </label>
-                        <span class="todo-item__date">от 04.05.2022</span>
-                        <button class="todo-item__delete" aria-label="Удалить">✖</button>
-                    </li>
-                    <li class="todo-item">
-                        <label class="todo-item__label">
-                            <input type="checkbox" class="todo-item__checkbox" checked>
-                            <span class="todo-item__text">Сложить в лукошко</span>
-                        </label>
-                        <span class="todo-item__date">от 19.05.2022</span>
-                        <button class="todo-item__delete" aria-label="Удалить">✖</button>
-                    </li>
-                </ul>
+                <ul class="todo-list"></ul>
+                <div class="empty-state">Список пуст. Добавьте первое дело!</div>
             </div>
         </main>
 
@@ -58,5 +46,7 @@
             <p class="footer__text">Copyright ©</p>
         </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -61,15 +61,57 @@
         </div>
     </div>
 
-    <div class="block" id="weather">
+        <div class="block" id="weather">
         <div class="block-content">
-            <h2>Погода</h2>
-            <p>Прогноз по регионам</p>
-            <div class="demo-card">
-                <p>🌡️ Текущая температура: +24°C</p>
-                <p>💧 Влажность: 65%</p>
-                <p>💨 Скорость ветра: 5 м/с</p>
+            <h2>Погода в регионе</h2>
+            <p>Актуальный прогноз и условия для комфортного путешеств%</p>
+            
+            <!-- Текущая погода -->
+            <div class="weather-current-card" id="currentWeather">
+                <div class="weather-main-info">
+                    <img id="weatherIcon" src="https://openweathermap.org/img/wn/04d@4x.png" alt="Погода" class="weather-icon">
+                    <div class="weather-temp-block">
+                        <span id="currentTemp" class="temp-big">--</span>
+                        <span class="temp-unit">°C</span>
+                        <div id="weatherDesc" class="weather-description">Загрузка...</div>
+                    </div>
+                </div>
+                <div class="weather-details-grid">
+                    <div class="detail-item">💧 Влажность: <span id="humidity">--</span>%</div>
+                    <div class="detail-item">💨 Ветер: <span id="windSpeed">--</span> м/с</div>
+                    <div class="detail-item">🌡️ Ощущается: <span id="feelsLike">--</span>°C</div>
+                    <div class="detail-item">👁️ Видимость: <span id="visibility">--</span> км</div>
+                </div>
             </div>
+
+            <!-- Карусель: Прогноз по дням -->
+            <div class="weather-carousel-wrapper">
+                <h3>Прогноз на 5 дней</h3>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" onclick="moveDailyCarousel(-1)">❮</button>
+                    <div class="carousel-viewport">
+                        <div class="carousel-track" id="dailyTrack">
+                            <!-- Карточки дней генерируются через JS -->
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" onclick="moveDailyCarousel(1)">❯</button>
+                </div>
+            </div>
+
+            <!-- Карусель: Почасовой прогноз -->
+            <div class="weather-carousel-wrapper">
+                <h3>Почасовой прогноз (ближайшие 24 часа)</h3>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" onclick="moveHourlyCarousel(-1)">❮</button>
+                    <div class="carousel-viewport">
+                        <div class="carousel-track" id="hourlyTrack">
+                            <!-- Карточки часов генерируются через JS -->
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" onclick="moveHourlyCarousel(1)">❯</button>
+                </div>
+            </div>
+
         </div>
     </div>
 
